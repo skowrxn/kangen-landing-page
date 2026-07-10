@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kangen-landing-page",
+  "compatibility_date": "2026-07-10",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    // Tylko public/ — nigdy nie serwujemy .git ani plików roboczych repo
+    "directory": "./public",
+    // Każda niedopasowana ścieżka (np. /czym-jest-woda-kangen) dostaje
+    // index.html ze statusem 200 — stare adresy kangenpolska.pl bez 404
+    "not_found_handling": "single-page-application"
+  }
+}
