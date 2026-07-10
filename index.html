@@ -10,6 +10,7 @@
   <meta property="og:description" content="Zapraszam do mojego oficjalnego sklepu EWS Enagic.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kangenpolska.pl/">
+  <meta property="og:image" content="https://kangenpolska.pl/barbara.webp">
   <style>
     :root {
       --ink: #1d2530;
@@ -38,6 +39,19 @@
       text-align: center;
     }
     .hero { max-width: 640px; }
+    .portrait {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 28px rgba(29, 37, 48, 0.14);
+      border: 4px solid #fff;
+    }
     .kicker {
       display: inline-block;
       font-size: 14px;
@@ -97,6 +111,7 @@
 <body>
   <main>
     <div class="hero">
+      <img class="portrait" src="/barbara.webp" alt="Barbara Karbowiak" width="148" height="148" loading="eager">
       <span class="kicker">Woda Kangen</span>
       <h1>Hej, jestem Barbara&nbsp;Karbowiak</h1>
       <p class="lead">
