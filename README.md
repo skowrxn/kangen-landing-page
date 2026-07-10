@@ -9,10 +9,11 @@ Pełna strona o wodzie alkalicznej działa na **zdrowawoda.info** (repo `kangen-
 ## Jak to działa
 
 - Czysty statyczny HTML — zero zależności, zero builda.
-- **Celowo brak pliku `404.html`** — Cloudflare Pages bez top-level `404.html`
-  przechodzi w tryb SPA i serwuje `index.html` ze statusem **200 dla każdej
-  ścieżki** (`/o-mnie`, `/czym-jest-woda-kangen`, `/blog/...`, itd.). Dzięki temu
-  stare adresy kangenpolska.pl nie zwracają 404. **Nie dodawaj `404.html`.**
+- Plik **`_redirects`** (`/* /index.html 200`) wymusza serwowanie `index.html`
+  ze statusem **200 dla każdej ścieżki** (`/o-mnie`, `/czym-jest-woda-kangen`,
+  `/blog/...`, itd.) — działa i na Cloudflare Pages, i na Workerach ze
+  statycznymi assetami. Dzięki temu stare adresy kangenpolska.pl nie zwracają
+  404. **Nie usuwaj `_redirects` i nie dodawaj `404.html`.**
 - `index.html` ma `<link rel="canonical" href="https://kangenpolska.pl/">`, żeby
   Google traktował wszystkie ścieżki jako jedną stronę.
 
