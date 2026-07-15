@@ -2,14 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kangen-landing-page",
   "compatibility_date": "2026-07-10",
+  // Landing page wyłączony (wymóg Enagic z 07.2026) — worker przekierowuje
+  // całą domenę kangenpolska.pl na EWS. Pliki w public/ zostają w repo,
+  // ale nie są już serwowane.
+  "main": "src/index.js",
   "observability": {
     "enabled": true
-  },
-  "assets": {
-    // Tylko public/ — nigdy nie serwujemy .git ani plików roboczych repo
-    "directory": "./public",
-    // Każda niedopasowana ścieżka (np. /czym-jest-woda-kangen) dostaje
-    // index.html ze statusem 200 — stare adresy kangenpolska.pl bez 404
-    "not_found_handling": "single-page-application"
   }
 }
